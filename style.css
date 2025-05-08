@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    min-height: 100dvh;
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: relative;
+    background-color: hsl(275, 100%, 97%);
+    font-family: 'Work Sans';
+}
+
+main{
+    min-width: 250px;
+    max-width: 530px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.8rem;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 20px 15px hsl(275, 49%, 92%);;
+}
+
+.faq-header{
+    display: flex;
+    gap: 1rem;
+}
+
+.faq-header img{
+    width: 35px;
+}
+
+details{
+    padding-block: 1.5rem;
+}
+
+details:last-child{
+    padding-bottom: 0;
+}
+
+details:not(:last-child){
+    border-bottom: 1px solid black;
+}
+
+details:open summary{
+    margin-bottom: 1rem;
+}
+
+details:open summary::after{
+    content: url(./assets/images/icon-minus.svg);
+}
+
+details p{
+    color: hsl(292, 16%, 49%);
+}
+
+summary{
+    font-weight: 600;
+    color: hsl(292, 42%, 14%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+summary:hover{
+    color: hsl(293, 54%, 48%);
+    cursor: pointer;
+}
+
+summary:focus-visible{
+    color: hsl(293, 54%, 48%);
+    outline-color: hsl(293, 54%, 48%);
+}
+
+summary::after{
+    display: block;
+    content: url(./assets/images/icon-plus.svg);
+}
+
+h1{
+    font-size: 3rem;
+    color: hsl(292, 42%, 14%);
+}
+
